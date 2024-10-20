@@ -15,6 +15,10 @@
   height: 30px;
 }
 
+.my-test-button, .new-test-button {
+  margin: 10px;
+}
+
 .signin-button, .signup-button {
   margin: 10px;
 }

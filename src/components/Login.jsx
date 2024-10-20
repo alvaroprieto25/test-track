@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase";
+import { useNavigate } from 'react-router-dom';  // Importar useNavigate
 
 
 
@@ -12,6 +13,8 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [error, setError] = useState("");
   const [isSignup, setIsSignup] = useState(false);
+
+  const navigate = useNavigate();
 
   const toggleSignup = () => {
     setIsSignup(!isSignup);
@@ -30,8 +33,11 @@ const handleRegister = (e) => {
       }).then(() => {
         console.log("Nuevo usuario registrado:", user);
         //Esto debe guardar en el local storage el token del usuario
+
         //Ademas debe guardar los datos del usuario en la storage
+
         //Y finalmente redirigir a la pantalla principal del profesor.
+        navigate('/dashboard');
       })
       .catch((err) => {
         setError("Error al registrar. Intenta de nuevo.");
@@ -53,8 +59,11 @@ const handleRegister = (e) => {
         const user = userCredential.user;
         console.log("Usuario logueado:", user);
         //Esto debe guardar en el local storage el token del usuario
+
         //Ademas debe guardar los datos del usuario en la storage
+
         //Y finalmente redirigir a la pantalla principal del profesor.
+        navigate('/dashboard');
       })
       .catch((error) => {
         // Manejar errores de autenticación
