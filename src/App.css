@@ -15,10 +15,43 @@
   height: 30px;
 }
 
-.my-test-button, .new-test-button {
+.my-test-button, .new-test-button, .signin-button, .signup-button, .button {
   margin: 10px;
 }
 
-.signin-button, .signup-button {
+.new-test {
+  width: 100vh;
+}
+
+.new-question-form {
+  width: 100%;
+}
+
+.question-field {
+  width: 100%;
+  height: 40px;
+  font-size: medium;
+}
+
+.question-type-field {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+select {
+  height: 40px;
+  width: 100%;
+}
+
+.test-answers {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
   margin: 10px;
+  height: 40px;
 }

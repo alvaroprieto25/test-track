@@ -3,16 +3,21 @@ import './App.css'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CreateTest from './components/CreateTest';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <div>
+      <h1>TEST TRACKER</h1>
+    </div>
      <Router>
       <Routes>
-        <Route path="/" element={<Login />} />  {/* Ruta para la página de registro */}
-        <Route path="/dashboard" element={<Dashboard />} /> {/* Ruta para el dashboard del profesor */}
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/create-test" element={<CreateTest />} />
       </Routes>
     </Router>
     </>
