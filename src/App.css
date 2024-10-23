@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -54,4 +54,59 @@ select {
 .answer {
   margin: 10px;
   height: 40px;
+} */
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-left: 20px;
+}
+.content-conteiner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.new-test {
+  width: 100%;
+}
+
+.login-page {
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin: 10px;
+}
+
+.input-field {
+  margin: 10px;
+  height: 40px;
+  width: 40%;
+}
+
+.new-question-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-type-field {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }

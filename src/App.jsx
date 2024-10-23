@@ -1,27 +1,20 @@
-import { useState } from 'react'
+// src/app/App.jsx
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './app/components/Header';
+import AppRoutes from './app/routes/AppRoutes';
 import './App.css'
-import Login from './components/Login'
-import Dashboard from './components/Dashboard'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CreateTest from './components/CreateTest';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <div>
-      <h1>TEST TRACKER</h1>
-    </div>
-     <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/create-test" element={<CreateTest />} />
-      </Routes>
-    </Router>
+      <Header />
+      <div className='content-conteiner'>
+      <Router>
+        <AppRoutes />
+      </Router>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
